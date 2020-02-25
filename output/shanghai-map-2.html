@@ -8,11 +8,11 @@
 
 </head>
 <body>
-    <div id="8ce1791569654a6dbfb3002a200f6ad2" class="chart-container" style="width:1000px; height:1000px;"></div>
+    <div id="44ddf6e20ea54eca8bf52b061fcc1a09" class="chart-container" style="width:1000px; height:1000px;"></div>
     <script>
-        var chart_8ce1791569654a6dbfb3002a200f6ad2 = echarts.init(
-            document.getElementById('8ce1791569654a6dbfb3002a200f6ad2'), 'white', {renderer: 'canvas'});
-        var option_8ce1791569654a6dbfb3002a200f6ad2 = {
+        var chart_44ddf6e20ea54eca8bf52b061fcc1a09 = echarts.init(
+            document.getElementById('44ddf6e20ea54eca8bf52b061fcc1a09'), 'white', {renderer: 'canvas'});
+        var option_44ddf6e20ea54eca8bf52b061fcc1a09 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -172,7 +172,7 @@
     ],
     "visualMap": {
         "show": true,
-        "type": "continuous",
+        "type": "piecewise",
         "min": 3,
         "max": 60,
         "inRange": {
@@ -188,11 +188,35 @@
         "orient": "vertical",
         "showLabel": true,
         "itemWidth": 20,
-        "itemHeight": 140,
-        "borderWidth": 0
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 30,
+                "label": ">30",
+                "color": "#8B1A1A"
+            },
+            {
+                "min": 11,
+                "max": 30,
+                "label": "11-30",
+                "color": "#CD3333"
+            },
+            {
+                "min": 5,
+                "max": 10,
+                "label": "6-10",
+                "color": "#FF6347"
+            },
+            {
+                "max": 5,
+                "label": "1-5",
+                "color": "#FFA07A"
+            }
+        ]
     }
 };
-        chart_8ce1791569654a6dbfb3002a200f6ad2.setOption(option_8ce1791569654a6dbfb3002a200f6ad2);
+        chart_44ddf6e20ea54eca8bf52b061fcc1a09.setOption(option_44ddf6e20ea54eca8bf52b061fcc1a09);
     </script>
 </body>
 </html>
